@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrisisGuard | Fake News Verification</title>
+  <link rel="stylesheet" href="claro.css">
+</head>
+<body>
+  <header>
+    <h1>CLARO</h1>
+    <p>Verify before panic spreads</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <textarea id="newsInput" placeholder="Paste the news or message here..."></textarea>
+      <button onclick="verifyNews()">Verify</button>
+    </section>
+
+    <section class="result-section" id="resultSection">
+      <h2>Verification Result</h2>
+      <div id="resultContent">
+        <p>No news verified yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Claro | Designed for Awareness, not censorship</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
