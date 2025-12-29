@@ -2,34 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>CrisisGuard | Verify Before You Share</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CrisisGuard | Fake News Verification</title>
   <link rel="stylesheet" href="claro.css">
 </head>
 <body>
-  <header>
-    <h1>CLARO</h1>
-    <p>Verify before panic spreads</p>
-  </header>
 
-  <main>
-    <section class="input-section">
-      <textarea id="newsInput" placeholder="Paste the news or message here..."></textarea>
-      <button onclick="verifyNews()">Verify</button>
-    </section>
+<audio id="alertSound">
+  <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3">
+</audio>
 
-    <section class="result-section" id="resultSection">
-      <h2>Verification Result</h2>
-      <div id="resultContent">
-        <p>No news verified yet.</p>
-      </div>
-    </section>
-  </main>
+<div class="container">
+  <h1>🚨 CLARO</h1>
+  <p class="subtitle">Rule-Based Fake News Verification During Crisis</p>
 
-  <footer>
-    <p>&copy; 2025 Claro | Designed for Awareness, not censorship</p>
-  </footer>
+  <select id="crisisType">
+    <option value="general">🌍 General Emergency</option>
+    <option value="earthquake">🌋 Earthquake</option>
+    <option value="flood">🌊 Flood</option>
+    <option value="pandemic">🦠 Pandemic</option>
+  </select>
 
-  <script src="script.js"></script>
+  <textarea id="newsInput" placeholder="Paste emergency message or news here..."></textarea>
+
+  <div class="buttons">
+    <button onclick="verify()">Verify</button>
+    <button class="demo" onclick="loadFake()">Load Fake</button>
+    <button class="demo" onclick="loadReal()">Load Real</button>
+  </div>
+
+  <div class="highlight-box" id="highlightBox"></div>
+
+  <div class="result">
+    <div class="progress">
+      <div class="fill" id="fill"></div>
+    </div>
+    <p id="confidence"></p>
+    <div id="tag"></div>
+    <p id="note"></p>
+  </div>
+
+  <div class="rules">
+    <h3>📋 Why this score?</h3>
+    <ul id="ruleList"></ul>
+  </div>
+</div>
+ 
+
+<script src="claro.js"></script>
 </body>
 </html>
