@@ -1,3 +1,21 @@
+// Implements the core logic of the system using rule-based analysis.
+
+// Main functionalities:
+
+// Loads sample fake and real crisis messages
+
+// Analyzes text using predefined credibility rules
+
+// Calculates a credibility score
+
+// Highlights risky words and phrases
+
+// Displays explainable reasons for score changes
+
+// Provides user guidance without enforcing censorship
+
+// Acts as the decision-support engine of the application.
+
 function loadFake() {
   document.getElementById("newsInput").value =
     "URGENT!!! Government hiding earthquake data. Share immediately before internet shutdown!!!";
