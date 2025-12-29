@@ -1,3 +1,19 @@
+/* Handles the complete visual design and user experience of the application.
+
+Key responsibilities:
+
+Responsive layout and centered container
+
+Dark-themed crisis-focused UI
+
+Buttons, progress bar, tags, and alerts styling
+
+Visual feedback for credibility levels (low, medium, high)
+
+Animations and highlights for better user attention
+
+Ensures clarity, readability, and a calm yet alert user experience during emergencies. */
+
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
@@ -139,3 +155,4 @@ footer {
   font-size: 0.9rem;
   background: #1f3941;
 }
+
